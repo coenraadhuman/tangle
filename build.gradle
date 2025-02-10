@@ -1,0 +1,56 @@
+plugins {
+	id 'java'
+}
+
+group = 'io.github.coenraadhuman'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+ext {
+	junitVersion = '5.9.2'
+	logbackVersion = '1.4.12'
+	lombokVersion = '1.18.30'
+	mockitoVersion = '5.2.0'
+	slf4jVersion = '2.0.9'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation platform("org.junit:junit-bom:$junitVersion")
+
+	implementation "org.slf4j:slf4j-api:$slf4jVersion"
+
+	implementation "org.projectlombok:lombok:$lombokVersion"
+
+	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+	// Testing Dependencies
+
+	testImplementation "org.junit.jupiter:junit-jupiter"
+	testImplementation "org.projectlombok:lombok:$lombokVersion"
+
+	testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+
+	testImplementation "org.mockito:mockito-core:$mockitoVersion"
+	testImplementation "ch.qos.logback:logback-classic:$logbackVersion"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
