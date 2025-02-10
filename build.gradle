@@ -12,6 +12,8 @@ java {
 }
 
 ext {
+	autoServiceVersion = '1.1.1'
+	javaPoetVersion = '1.13.0'
 	junitVersion = '5.9.2'
 	logbackVersion = '1.4.12'
 	lombokVersion = '1.18.30'
@@ -32,10 +34,12 @@ repositories {
 dependencies {
 	implementation platform("org.junit:junit-bom:$junitVersion")
 
-	implementation "org.slf4j:slf4j-api:$slf4jVersion"
-
+	implementation "com.google.auto.service:auto-service:$autoServiceVersion"
 	implementation "org.projectlombok:lombok:$lombokVersion"
+	implementation "org.slf4j:slf4j-api:$slf4jVersion"
+	implementation "com.squareup:javapoet:$javaPoetVersion"
 
+	annotationProcessor "com.google.auto.service:auto-service:$autoServiceVersion"
 	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
 	// Testing Dependencies
