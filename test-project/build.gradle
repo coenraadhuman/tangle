@@ -1,0 +1,15 @@
+plugins {
+	id 'application'
+}
+
+group = 'io.github.coenraadhuman'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+	implementation project(":framework")
+	annotationProcessor project(":framework")
+}
+
+tasks.withType(Jar).configureEach {
+	enabled = false
+}
