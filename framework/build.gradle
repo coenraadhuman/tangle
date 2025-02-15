@@ -3,16 +3,6 @@ plugins {
 	id 'maven-publish' // Todo: configure MavenCentral publication
 }
 
-ext {
-	autoServiceVersion = '1.1.1'
-	compileTestingVersion = '0.19'
-	javaPoetVersion = '1.13.0'
-	junitVersion = '5.9.2'
-	lombokVersion = '1.18.30'
-	mockitoVersion = '5.2.0'
-	truthVersion = '1.1.3'
-}
-
 dependencies {
 	implementation platform("org.junit:junit-bom:$junitVersion")
 
