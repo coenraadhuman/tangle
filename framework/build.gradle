@@ -10,6 +10,8 @@ dependencies {
 	implementation "org.projectlombok:lombok:$lombokVersion"
 	implementation "com.squareup:javapoet:$javaPoetVersion"
 
+	api "jakarta.inject:jakarta.inject-api:$injectApiVersion"
+
 	annotationProcessor "com.google.auto.service:auto-service:$autoServiceVersion"
 	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 

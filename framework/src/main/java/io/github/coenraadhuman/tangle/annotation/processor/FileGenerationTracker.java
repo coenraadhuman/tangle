@@ -1,4 +1,4 @@
-package io.github.coenraadhuman.tangle;
+package io.github.coenraadhuman.tangle.annotation.processor;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

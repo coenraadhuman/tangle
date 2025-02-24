@@ -7,6 +7,7 @@ version = '0.0.1-SNAPSHOT'
 
 dependencies {
 	implementation project(":framework")
+
 	implementation "org.projectlombok:lombok:$lombokVersion"
 
 	// Ensure other processor run as well:

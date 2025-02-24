@@ -1,8 +1,5 @@
-package io.github.coenraadhuman;
+package io.github.coenraadhuman.test.project;
 
-import io.github.coenraadhuman.tangle.Service;
-
-@Service
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
